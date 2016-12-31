@@ -1,0 +1,18 @@
+nginx: 
+    build: ./nginx
+    links: 
+        - tomcat
+
+tomcat: 
+    build: ./tomcat
+    links: 
+        - mysql
+        - redis
+
+mysql: 
+    build: ./mysql
+    environment: 
+        MYSQL_ROOT_PASSWORD: 123456
+
+redis: 
+    build: ./redis
