@@ -25,4 +25,4 @@ redis:
     build: ./redis
     ports: 
         - 8789:6379
-container_name: MemoryDB
+    container_name: MemoryDB
